@@ -1,0 +1,104 @@
+body{
+    background-color: #815b09;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-attachment: fixed;
+}
+
+
+.CartContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+     
+}
+.cart-product{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    margin-top: 90px;
+    border-radius: 50px;
+    transition: transform 0.1s ease; /* Add transition for smooth effect */
+    background-color: rgba(245, 245, 245, 0.863) ;
+    
+}
+.cart-product:hover {
+    transform: translateY(-5px); /* Move the div 5 pixels up on hover */
+  }
+.cart-product .img{
+    width: 100px;
+    height: 100px;
+}
+.cart-product .img img{
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 10px 15px 20px rgba(105, 15, 15, 0.1); /* Horizontal offset, vertical offset, blur radius, and color */
+
+}
+
+.totalAmount h2{
+    /* padding: 10px; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2em;
+
+}
+.pName{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.price{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+.hotelName{
+    font-size: 20px;
+    color: rgba(65, 61, 61, 0.863);
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+.productDesc{
+    width: 70%;
+    font-style: italic;
+    margin: 2px;
+
+}
+.totalAmount {
+    border: none;
+    border-radius: 3px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    background-color: rgba(219, 219, 16, 0.747);
+    padding-left: 5px;
+    margin: 2px;
+    width: 210px;
+    font-weight: bolder;     
+}
+.totalAmount h2{
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.orderDetails{
+    display: flex;
+    justify-content: space-between;
+}
+.placeOrder{
+    display: flex;
+    justify-content: space-around;
+}
+.O-btn{
+    background-color: #60b246;
+    color: white;
+    cursor: pointer;
+    padding: 3px;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    border: 5px;
+}
