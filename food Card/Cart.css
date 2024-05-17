@@ -91,14 +91,21 @@ body{
 .placeOrder{
     display: flex;
     justify-content: space-around;
+    margin-top: 100px;
 }
 .O-btn{
     background-color: #60b246;
     color: white;
     cursor: pointer;
-    padding: 3px;
+    padding: 8px;
     text-align: center;
     font-weight: 600;
     border: none;
-    border: 5px;
+    border-radius: 5px;
+    border: 2px solid #505050 ;
+}
+.empty-msg h1{
+    color: rgba(0, 0, 0, 0.925);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

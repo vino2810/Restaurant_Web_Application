@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import './Header.css';
 
-export const Header = ({ cart }) => {
+export const Header = ({ cart,Veg }) => {
     const [open, setOpen] = useState(false);
     const location = useLocation();
 
@@ -13,6 +13,7 @@ export const Header = ({ cart }) => {
 
     // Function to check if current location is the home page
     const isHomePage = () => location.pathname === "/";
+
 
     return (
         <>
@@ -25,11 +26,11 @@ export const Header = ({ cart }) => {
                     {open ? <FiX /> : <FiMenu />}
                 </div>
                 <ul className={open ? 'nav-show' : 'nav-close'}>
-                    <li className="nav-item"><Link to={"/"} onClick={closeMenu}><i className="fa-solid fa-house"></i>Home</Link></li>
-                    <li className="nav-item"><Link to={'/'} onClick={closeMenu}><i className="fa-solid fa-bowl-rice"></i>Veg</Link></li>
-                    <li className="nav-item"> <Link to={'/'} onClick={closeMenu}><i className="fa-solid fa-drumstick-bite"></i>Non Veg</Link></li>
-                    <li className="nav-item"><Link to={"/"} onClick={closeMenu}><i className="fa-solid fa-cookie-bite"></i>Snacks</Link></li>
-                    <li className="nav-item"><Link to={"/"} onClick={closeMenu}><i className="fa-solid fa-martini-glass-citrus"></i>Juices</Link></li>
+                    <li className="nav-item"><Link to={"/"} onClick={closeMenu} ><i className="fa-solid fa-house"></i>Home</Link></li>
+                    <li className="nav-item"><Link to={'/Veg'} onClick={closeMenu}><i className="fa-solid fa-bowl-rice"></i>Veg</Link></li>
+                    <li className="nav-item"> <Link to={'/Nonveg'} onClick={closeMenu}><i className="fa-solid fa-drumstick-bite"></i>Non Veg</Link></li>
+                    <li className="nav-item"><Link to={"/Snacks"} onClick={closeMenu}><i className="fa-solid fa-cookie-bite"></i>Snacks</Link></li>
+                    <li className="nav-item"><Link to={"/Juices"} onClick={closeMenu}><i className="fa-solid fa-martini-glass-citrus"></i>Juices</Link></li>
                     <li className="nav-item"><Link to={"/Cart"} onClick={closeMenu}><i className="fa-solid fa-cart-plus"></i><span className="cart-count">{cart.length}</span>View card</Link></li>
                 </ul>
             </nav>

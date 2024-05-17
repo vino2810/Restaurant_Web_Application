@@ -5,7 +5,7 @@ import './Cart.css';
 export const Foodcart=()=>{
   const[total,settotal]=useState(0);
   const {cart}=useContext(cartcontext)
-
+  
 
   useEffect(()=>{
     settotal(cart.reduce((acc,curr)=>acc+parseInt(curr.amt),0))
@@ -39,7 +39,7 @@ export const Foodcart=()=>{
             ))
         }
         </div>
-      <div className='placeOrder'>
+        { total> 0 ?  ( <div className='placeOrder'>
         <div className='totalAmount'>
         <h2>Total Amount Rs: ₹{total}</h2>
         </div>
@@ -47,7 +47,8 @@ export const Foodcart=()=>{
           <button className='O-btn'>Place Your Order</button>
         </div>
 
-        </div>
+        </div>):<div className='empty-msg'><h1>Your Food Cart is Empty :( </h1></div>}
+     
      
        
         </>

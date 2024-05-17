@@ -2,13 +2,12 @@ import { useContext } from 'react';
 import './Product.css'
 import { cartcontext } from '../App';
 
-
-
-
 export const Product = ({product})=>{
     const {cart,setcart}=useContext(cartcontext)
 
-     const name=product.name.length>20 ? product.name.substring(0,20)+"..":product.name;
+     const name=product.name.length>10 ? product.name.substring(0,10)+"..":product.name;
+
+    //  console.log("name:"+name);
 
      const addcart=()=>{
         setcart([...cart,product]);

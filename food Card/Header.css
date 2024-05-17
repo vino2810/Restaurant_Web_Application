@@ -80,7 +80,7 @@ nav {
 
 }
 .landing-img{
-  background-image: url('../Webimages/Homelandingimg.jpg');
+  background-image: url('../Assets/Homelandingimg.jpg');
   background-size: cover;
   background-position: center;
   height: 600px; 
@@ -88,6 +88,7 @@ nav {
   top: 70px;
 
  }
+
  .landing-img p,h1,h3{
     /* text-align: center; */
     position: relative;
@@ -130,4 +131,8 @@ nav {
   background-color: #f3cb5285;
   border-radius: 50px;
   
+}
+.nav ul li a.active {
+  color: red; /* Style for the active link */
+  font-weight: bold;
 }
